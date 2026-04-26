@@ -259,67 +259,65 @@ async function generateVideo() {
     }
 
     const data = await resp.json();
-    const requestId = data.request_id;
-    if (!requestId) throw new Error('No request ID returned');
+    const jobId = data.job_id;
+    if (!jobId) throw new Error('No job ID returned');
 
     videoResult.innerHTML = `
       <div class="loading-card" id="video-status-card">
         <div class="spinner"></div>
-        <p id="video-status-text">Video queued — checking status…</p>
-        <p style="font-size:0.75rem">Usually takes 1–3 minutes</p>
+        <p id="video-status-text">Video queued — generating…</p>
+        <p style="font-size:0.75rem">HuggingFace free tier: usually 2–5 minutes</p>
         <div class="progress-bar-wrap"><div class="progress-bar"></div></div>
       </div>`;
 
-    pollVideoStatus(requestId);
+    pollVideoStatus(jobId);
   } catch (err) {
     videoResult.innerHTML = `<div class="error-card">Failed to start video generation: ${escapeHtml(err.message)}</div>`;
     generateVideoBtn.disabled = false;
   }
 }
 
-function pollVideoStatus(requestId) {
+function pollVideoStatus(jobId) {
   let attempts = 0;
-  const MAX_ATTEMPTS = 120; // 10 min max
+  const MAX_ATTEMPTS = 72; // 6 min max (72 × 5s)
 
   videoPollInterval = setInterval(async () => {
     attempts++;
     if (attempts > MAX_ATTEMPTS) {
       clearInterval(videoPollInterval);
-      videoResult.innerHTML = `<div class="error-card">Video generation timed out. Please try again.</div>`;
+      videoResult.innerHTML = `<div class="error-card">Video generation timed out. HuggingFace free tier can be busy — please try again.</div>`;
       generateVideoBtn.disabled = false;
       return;
     }
 
     try {
-      const resp = await fetch(`/api/video-status?request_id=${encodeURIComponent(requestId)}`);
+      const resp = await fetch(`/api/video-status?job_id=${encodeURIComponent(jobId)}`);
       const data = await resp.json();
 
       const statusEl = document.getElementById('video-status-text');
       if (statusEl) {
-        const s = (data.status || '').toUpperCase();
-        if (s === 'IN_QUEUE') statusEl.textContent = 'In queue…';
-        else if (s === 'IN_PROGRESS') statusEl.textContent = 'Generating video…';
-        else statusEl.textContent = `Status: ${data.status || 'processing'}`;
+        if (data.status === 'pending') statusEl.textContent = 'Queued…';
+        else if (data.status === 'processing') statusEl.textContent = 'Generating video…';
+        else statusEl.textContent = `Status: ${data.status}`;
       }
 
-      if (data.status === 'COMPLETED') {
+      if (data.status === 'completed') {
         clearInterval(videoPollInterval);
         generateVideoBtn.disabled = false;
-        const videoUrl = data?.result?.video?.url || data?.result?.videos?.[0]?.url;
-        if (videoUrl) {
-          videoResult.innerHTML = `
-            <div class="video-result-card">
-              <video controls autoplay loop>
-                <source src="${videoUrl}" type="video/mp4" />
-              </video>
-              <div class="result-actions">
-                <a href="${videoUrl}" target="_blank" class="btn-primary btn-sm">Open Full Size</a>
-                <a href="${videoUrl}" download="generated.mp4" class="btn-ghost btn-sm">Download</a>
-              </div>
-            </div>`;
-        } else {
-          videoResult.innerHTML = `<div class="error-card">Video completed but no URL found in response.</div>`;
-        }
+        const src = `data:video/mp4;base64,${data.video_b64}`;
+        videoResult.innerHTML = `
+          <div class="video-result-card">
+            <video controls autoplay loop>
+              <source src="${src}" type="video/mp4" />
+            </video>
+            <div class="result-actions">
+              <a href="${src}" download="generated.mp4" class="btn-primary btn-sm">Download</a>
+            </div>
+          </div>`;
+      } else if (data.status === 'error') {
+        clearInterval(videoPollInterval);
+        generateVideoBtn.disabled = false;
+        videoResult.innerHTML = `<div class="error-card">${escapeHtml(data.error || 'Video generation failed.')}</div>`;
       }
     } catch {
       // silently continue polling on network hiccups
