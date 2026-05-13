@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 5 Validated AI Business Ideas for Small Business — 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f4f6fa;
+      color: #1a1a2e;
+      padding: 40px 20px;
+    }
+
+    .report-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+      color: white;
+      padding: 48px 40px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+    }
+
+    header .label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e94560;
+      margin-bottom: 12px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    header p {
+      font-size: 15px;
+      color: #a8b2c8;
+      line-height: 1.6;
+      max-width: 680px;
+    }
+
+    .meta-bar {
+      display: flex;
+      gap: 24px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px 28px;
+      margin-bottom: 32px;
+      font-size: 13px;
+      color: #555;
+      border: 1px solid #e2e8f0;
+      flex-wrap: wrap;
+    }
+
+    .meta-bar span strong { color: #0f3460; }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 28px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .card-header {
+      padding: 28px 32px 20px;
+      border-bottom: 1px solid #f0f4f8;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .rank-badge {
+      min-width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .rank-1 { background: linear-gradient(135deg, #e94560, #c62a47); }
+    .rank-2 { background: linear-gradient(135deg, #f97316, #ea580c); }
+    .rank-3 { background: linear-gradient(135deg, #0ea5e9, #0284c7); }
+    .rank-4 { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+    .rank-5 { background: linear-gradient(135deg, #10b981, #059669); }
+
+    .card-title-block h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f3460;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .card-title-block .tagline {
+      font-size: 13px;
+      color: #64748b;
+      font-style: italic;
+    }
+
+    .card-body {
+      padding: 24px 32px;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .stat-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .stat-box .stat-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+
+    .stat-box .stat-value {
+      font-size: 17px;
+      font-weight: 800;
+      color: #0f3460;
+    }
+
+    .difficulty-easy   { color: #10b981; }
+    .difficulty-medium { color: #f97316; }
+    .difficulty-hard   { color: #e94560; }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 0;
+    }
+
+    .section-block {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .section-block h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .section-block p {
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .section-block.full {
+      grid-column: 1 / -1;
+    }
+
+    .why-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 13px;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 16px;
+    }
+
+    footer a { color: #e94560; text-decoration: none; font-weight: 600; }
+
+    @media (max-width: 600px) {
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .section-grid { grid-template-columns: 1fr; }
+      .card-body { padding: 20px; }
+      .card-header { padding: 20px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div class="report-wrapper">
+
+  <header>
+    <div class="label">Startup Research Report · May 2026</div>
+    <h1>Top 5 Validated AI Business Ideas<br>for Small Business Niches</h1>
+    <p>A ranked analysis of underserved AI prompt and toolkit opportunities — validated against 2026 adoption data, regulatory shifts, and real customer pain points. Built for founders who want to build lean, sell fast, and win a specific market.</p>
+  </header>
+
+  <div class="meta-bar">
+    <span><strong>Focus:</strong> AI Prompts &amp; Toolkits for Small Businesses</span>
+    <span><strong>Sources:</strong> SHRM, PwC, US Chamber of Commerce, JP Morgan, GAO, SBA</span>
+    <span><strong>Date:</strong> May 2026</span>
+    <span><strong>Ranked by:</strong> Revenue Potential × Market Gap × Build Difficulty</span>
+  </div>
+
+  <!-- ── IDEA #1 ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="rank-badge rank-1">#1</div>
+      <div class="card-title-block">
+        <h2>AI Compliance &amp; HR Toolkit for Small Business Owners</h2>
+        <div class="tagline">"Know what the law requires — without hiring a lawyer."</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-label">Monthly Revenue Potential</div>
+          <div class="stat-value">$8K – $40K</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Target Price Point</div>
+          <div class="stat-value">$49 – $129/mo</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Build Difficulty</div>
+          <div class="stat-value difficulty-medium">Medium</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="section-block">
+          <h4>The Problem</h4>
+          <p>New state AI laws hit in 2026 — Colorado's SB 24-205 and Illinois HB 3773 impose fines up to $20,000 per violation. Most small business owners have zero AI governance policy, no written HR AI guidelines, and no idea they're even exposed. They can't afford an employment attorney on retainer.</p>
+        </div>
+        <div class="section-block">
+          <h4>Target Customer</h4>
+          <p>Small business owners with 2–25 employees in Colorado, Illinois, and any state with pending AI employment law. Especially retail, food service, healthcare clinics, and professional services — anywhere AI touches hiring or performance decisions.</p>
+        </div>
+        <div class="section-block full">
+          <div class="why-badge">Why It's Underserved</div>
+          <p>Less than half of all organizations will use AI in HR in 2026 — and almost none have formal governance in place. Legal firms don't serve this affordably. Existing HR software ignores compliance prompting entirely. The regulatory window is wide open: the businesses that get fined first will create a wave of demand.</p>
+        </div>
+        <div class="section-block full">
+          <h4>What You Build</h4>
+          <p>A prompt toolkit + plain-English checklist system that walks a small business owner through: writing a compliant AI use policy, auditing vendor AI tools, building an employee notification template for AI-assisted decisions, and generating a quarterly compliance review. No legal jargon. Subscription with state-specific update alerts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── IDEA #2 ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="rank-badge rank-2">#2</div>
+      <div class="card-title-block">
+        <h2>AI Operations Toolkit for Home Service &amp; Trade Businesses</h2>
+        <div class="tagline">"For plumbers, electricians, and HVAC techs — who hate paperwork."</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-label">Monthly Revenue Potential</div>
+          <div class="stat-value">$6K – $30K</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Target Price Point</div>
+          <div class="stat-value">$19 – $49/mo</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Build Difficulty</div>
+          <div class="stat-value difficulty-easy">Low</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="section-block">
+          <h4>The Problem</h4>
+          <p>Only 25% of residential contractors have meaningfully integrated AI into their workflows as of early 2026 — yet among those who have, 38% report measurable business impact. The other 75% are drowning in quote follow-ups, no-show management, seasonal scheduling surges, and review requests they never send.</p>
+        </div>
+        <div class="section-block">
+          <h4>Target Customer</h4>
+          <p>Solo and small-crew trade businesses: HVAC, plumbing, electrical, roofing, pest control, pressure washing, and lawn care. Owner-operators aged 35–55 who are skeptical of tech but motivated by saving time and winning more jobs.</p>
+        </div>
+        <div class="section-block full">
+          <div class="why-badge">Why It's Underserved</div>
+          <p>Existing AI tools are built for office workers. Trade businesses need prompts written in plain language for real-world scenarios: "Write me a text to follow up on an unanswered quote," "Draft a Google review request for a happy HVAC customer," "Write a seasonal surge auto-reply for my voicemail." No tool is nailing this vertical. Entry barrier is low; loyalty is high once they see it work.</p>
+        </div>
+        <div class="section-block full">
+          <h4>What You Build</h4>
+          <p>A done-for-you prompt library organized by job phase: Lead follow-up, Quote delivery, Scheduling, Post-job review requests, Upsell scripts, and Off-season reactivation. Delivered as a web app or Notion/Google Doc subscription. Upsell: industry-specific add-on packs (e.g., HVAC seasonal pack, roofing storm response pack).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── IDEA #3 ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="rank-badge rank-3">#3</div>
+      <div class="card-title-block">
+        <h2>AI Customer Service Script Toolkit for Local Retailers &amp; Restaurants</h2>
+        <div class="tagline">"Handle complaints, requests, and reviews without losing your cool."</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-label">Monthly Revenue Potential</div>
+          <div class="stat-value">$5K – $25K</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Target Price Point</div>
+          <div class="stat-value">$29 – $79/mo</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Build Difficulty</div>
+          <div class="stat-value difficulty-easy">Low</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="section-block">
+          <h4>The Problem</h4>
+          <p>Customer service is the #2 use case for AI in small business — but most local retailers and restaurants are still writing every response manually. A 1-star review sits unanswered for days. A refund request goes sideways. A complaint email triggers an emotional reply. Each one damages reputation or costs a repeat customer.</p>
+        </div>
+        <div class="section-block">
+          <h4>Target Customer</h4>
+          <p>Brick-and-mortar local businesses: independent restaurants, boutique retail, salons, gyms, and service businesses with a customer-facing reputation. Owners who manage their own Google, Yelp, and social DMs — and dread every notification.</p>
+        </div>
+        <div class="section-block full">
+          <div class="why-badge">Why It's Underserved</div>
+          <p>Tools like Intercom and Tidio serve mid-market. Nothing serves the owner of a single pizza shop who gets 3 Yelp reviews a week and needs to respond well — without paying $200/month for enterprise chat software. The gap is in done-for-you language templates that are brand-voice-flexible, legally safe, and emotionally intelligent. It's a volume play: tens of thousands of these businesses exist in every metro area.</p>
+        </div>
+        <div class="section-block full">
+          <h4>What You Build</h4>
+          <p>A fill-in-the-blank prompt system covering: 1-star review responses, refund and dispute language, loyalty reactivation messages, apology scripts, and "we're short-staffed" communications. Organized by scenario. Delivered as a lightweight web tool or Notion database. Upsell: a custom brand-voice calibration session.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── IDEA #4 ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="rank-badge rank-4">#4</div>
+      <div class="card-title-block">
+        <h2>AI Sales Outreach Toolkit for B2B Service Providers</h2>
+        <div class="tagline">"Stop staring at a blank email. Start closing."</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-label">Monthly Revenue Potential</div>
+          <div class="stat-value">$10K – $50K</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Target Price Point</div>
+          <div class="stat-value">$49 – $149/mo</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Build Difficulty</div>
+          <div class="stat-value difficulty-medium">Medium</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="section-block">
+          <h4>The Problem</h4>
+          <p>Small B2B service providers — accountants, IT consultants, marketing freelancers, staffing agencies — win business through outreach but hate writing it. They know their service cold but freeze when writing a cold email, a LinkedIn DM, a proposal intro, or a follow-up after a no-response. Their pipeline leaks from weak copy, not weak offerings.</p>
+        </div>
+        <div class="section-block">
+          <h4>Target Customer</h4>
+          <p>Solo consultants and small agencies (1–10 people) in B2B professional services: bookkeepers, IT support shops, marketing agencies, HR consultants, and insurance brokers. Revenue range $100K–$1M/year. They've heard of AI but haven't committed to learning it.</p>
+        </div>
+        <div class="section-block full">
+          <div class="why-badge">Why It's Underserved</div>
+          <p>Sales AI tools (Apollo, Instantly, Clay) are built for growth-stage companies with SDR teams and $1K+/month budgets. Small B2B providers have neither the budget nor the technical appetite for those platforms. A prompt toolkit priced at $49–$99/month that outputs a ready-to-send cold email, a follow-up sequence, and a proposal template in 10 minutes is a fundamentally different product — and the market gap is wide.</p>
+        </div>
+        <div class="section-block full">
+          <h4>What You Build</h4>
+          <p>Prompt templates by sales stage: ICP identification, cold outreach by channel (email, LinkedIn, phone script), proposal narrative, objection response scripts, and closed-lost reactivation. Includes a "pain point library" by industry vertical. Upsell: a done-for-you 30-day outreach sequence for their specific service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── IDEA #5 ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="rank-badge rank-5">#5</div>
+      <div class="card-title-block">
+        <h2>AI Pricing &amp; Revenue Strategy Toolkit for Product-Based Small Businesses</h2>
+        <div class="tagline">"Charge what you're worth. Finally."</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-label">Monthly Revenue Potential</div>
+          <div class="stat-value">$4K – $20K</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Target Price Point</div>
+          <div class="stat-value">$39 – $99/mo</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Build Difficulty</div>
+          <div class="stat-value difficulty-medium">Medium</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="section-block">
+          <h4>The Problem</h4>
+          <p>Small product-based businesses — Etsy sellers, boutique retailers, food producers, print shops — consistently underprice out of fear and guesswork. They have no pricing framework, no competitive analysis process, and no language for communicating premium value to customers. AI is now being used in pricing by enterprise retailers, but zero tools exist to bring this down to the small business level.</p>
+        </div>
+        <div class="section-block">
+          <h4>Target Customer</h4>
+          <p>Product-based small business owners: handmade goods sellers, specialty food brands, independent boutiques, print-on-demand shops, and local makers selling online and in-person. Typically doing $20K–$300K/year in revenue and leaving margin on the table every quarter.</p>
+        </div>
+        <div class="section-block full">
+          <div class="why-badge">Why It's Underserved</div>
+          <p>PwC and the US Chamber of Commerce both flagged pricing as an "emerging AI frontier" in 2026 — but every tool in this space is enterprise-grade and data-intensive. A prompt toolkit that walks a candle maker through competitive price benchmarking, value-based pricing language for their product descriptions, discount strategy scripts, and seasonal pricing calendars doesn't exist at a small business price point. First-mover advantage is real here.</p>
+        </div>
+        <div class="section-block full">
+          <h4>What You Build</h4>
+          <p>A prompt-guided pricing workbook covering: cost-plus vs. value-based pricing analysis, competitor research prompts, product description language that justifies premium pricing, discount and bundle strategy templates, and a quarterly pricing review checklist. Delivered as a web tool or Notion system. Upsell: a 1-on-1 pricing audit session powered by your own AI workflow.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Report produced for <a href="https://aimpointb2b.com" target="_blank">AimPoint B2B</a> · AI Prompt Toolkits for Small Businesses · May 2026</p>
+    <p style="margin-top:8px;">Sources: SHRM State of AI in HR 2026 · PwC AI Predictions 2026 · US Chamber of Commerce · JP Morgan Chase Institute · US GAO · Colorado SB 24-205 · Illinois HB 3773 · QuoteIQ · handoff.ai · pathopt.com · SBA AI Training Act 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>
